@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "outDir": "build",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "@type-node/*": ["src/*"]
+    }
+  },
+  "compileOnSave": true,
+  "include": ["**/*.ts"]
+}

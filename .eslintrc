@@ -1,0 +1,3 @@
+{
+  "extends": ["hbr", "hbr/node", "hbr/typescript"]
+}
