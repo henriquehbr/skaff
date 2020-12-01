@@ -5,11 +5,11 @@
 ### Usage
 
 ```
-$ scaffold-prototype <generator> [outDir] [parameters]
+$ scaffold-prototype <generator> [outDir] [flags]
 ```
 
 ### To-do list
 
-- [] Tests
-  - [] Display help page when no parameters are passed
-  - [] Display error message when unknown parameter is passed
+- [ ] Tests
+  - [ ] parseCLIParams: display help page when no parameters are passed
+  - [ ] parseCLIParams: display error message when unknown flag is passed
