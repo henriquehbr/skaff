@@ -1,6 +1,6 @@
 {
-  "name": "type-node",
-  "version": "1.0.0",
+  "name": "scaffolding-protoype",
+  "version": "0.1.0",
   "main": "src/index.ts",
   "author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
   "license": "MIT",
