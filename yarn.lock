@@ -627,10 +627,18 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@26.x", "@types/jest@^26.0.15":
+"@types/jest@26.x":
   version "26.0.15"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.15.tgz#12e02c0372ad0548e07b9f4e19132b834cb1effe"
   integrity sha512-s2VMReFXRg9XXxV+CW9e5Nz8fH2K1aEhwgjUqPPbQd7g95T0laAcvLv032EhFHIa5GHsZ8W7iJEQVaJq6k3Gog==
+  dependencies:
+    jest-diff "^26.0.0"
+    pretty-format "^26.0.0"
+
+"@types/jest@^26.0.16":
+  version "26.0.16"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.16.tgz#b47abd50f6ed0503f589db8e126fc8eb470cf87c"
+  integrity sha512-Gp12+7tmKCgv9JjtltxUXokohCAEZfpJaEW5tn871SGRp8I+bRWBonQO7vW5NHwnAHe5dd50+Q4zyKuN35i09g==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -1602,10 +1610,10 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.8.15:
-  version "0.8.15"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.15.tgz#cbc4d82a7fc4571d455233456e6fba83fd0364f1"
-  integrity sha512-mSaLo9t/oYtQE6FRUEdO47Pr8PisSPzHtgr+LcihIcjBEhbYwjT6WLCQ7noDoTBfIatBCw229rtmIwl9u9UQwg==
+esbuild@^0.8.17:
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.17.tgz#1c16c6d5988dcfdcf27a7e1612b7fd05e1477c54"
+  integrity sha512-ReHap+Iyn5BQF0B8F3xrLwu+j57ri5uDUw2ej9XTPAuFDebYiWwRzBY4jhF610bklveXLbCGim/8/2wQKQlu1w==
 
 escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -1904,13 +1912,13 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-eswatch@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/eswatch/-/eswatch-0.11.0.tgz#b9c2ecc35f10381fd808c43bec08fd56730055a7"
-  integrity sha512-HxhKMuQtxFQTKKlJ2O6upkVNypsFpyIoheXxawGj9ha/Le4QvFeU7stOWcP83qM03BuKiYdPa6ZigsTA4//s7A==
+eswatch@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/eswatch/-/eswatch-0.11.2.tgz#d0248702d9fefc46d3664c9eb43d65f30123928b"
+  integrity sha512-cg7Wcc3aAVmGItVE6s7IVrETP5l35hzfh891idnt5CztBMJaMTCZ/6d+DCS/OCWbViMmAhU6vWpde9lzf8kJ6Q==
   dependencies:
     chokidar "^3.4.3"
-    esbuild "^0.8.15"
+    esbuild "^0.8.17"
     find-up "^5.0.0"
     is-glob "^4.0.1"
     minimist "^1.2.5"

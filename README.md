@@ -10,6 +10,5 @@ $ scaffold-prototype <generator> [outDir] [flags]
 
 ### To-do list
 
-- [ ] Tests
-  - [ ] parseCLIParams: display help page when no parameters are passed
-  - [ ] parseCLIParams: display error message when unknown flag is passed
+- [x] Tests
+  - [x] parseCLIParams: check if generator exists
