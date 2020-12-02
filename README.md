@@ -11,4 +11,6 @@ $ scaffold-prototype <generator> [outDir] [flags]
 ### To-do list
 
 - [x] Tests
-  - [x] parseCLIParams: check if generator exists
+  - [x] validateGenerator: check if generator exists
+  - [x] validateGenerator: check if generator fails with wrong path
+  - [ ] validateGenerator: check if generator.js file exists
