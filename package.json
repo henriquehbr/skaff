@@ -1,10 +1,18 @@
 {
   "name": "scaffolding-protoype",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "src/index.ts",
   "author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "bump:patch": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --patch",
+		"bump:minor": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --minor",
+		"bump:major": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --major",
+		"version": "yarn changelog -p",
+		"postversion": "yes \"\" | yarn publish",
+		"changelog": "auto-changelog -l false --hide-credit",
+		"postchangelog": "git add CHANGELOG.md",
+		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
     "start": "node build",
     "dev": "eswatch --outext .mjs --minify --bundle --format esm --run --outdir ./build --clear --watch ./src/**/* ./src/index.ts",
     "lint": "eslint --fix \"src/**/*.ts\" && tsc --noEmit -p .",
@@ -12,14 +20,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn lint"
+      "post-commit": "yarn changelog -u && yarn amend-changelog",
+      "pre-push": "cross-env HUSKY_SKIP_HOOKS=1 git push --tags"
     }
   },
   "devDependencies": {
     "@types/jest": "^26.0.16",
     "@types/node": "^14.14.10",
+    "auto-changelog": "^2.2.1",
     "chokidar": "^3.4.3",
+    "cross-env": "^7.0.3",
     "eslint": "^7.14.0",
     "eslint-config-hbr": "^1.0.0",
     "eswatch": "^0.11.2",
