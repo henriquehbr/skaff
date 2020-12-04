@@ -1,4 +1,4 @@
-# scaffolding-prototype specification
+# skaff specification
 
 > This specification aims to describe the inner workings of `scaffolding-project` every single feature, step-by-step, in high detail
 
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-`scaffolding-prototype` is a CLI scaffolding tool aimed to setup a project architecture in a matter of seconds, regardless of the language, tools or environment, the way it works is relatively simple and mainly composed by three major pieces: **prompts**, **actions** and **templates**
+`skaff` is a CLI scaffolding tool aimed to setup a project architecture in a matter of seconds, regardless of the language, tools or environment, the way it works is relatively simple and mainly composed by three major pieces: **prompts**, **actions** and **templates**
 
 - ### Prompts
 
@@ -66,10 +66,10 @@ These are the files to be generated, but with a extra syntax, that will dynamica
 
 ## Usage
 
-The example below contain details about the parameters needed for executing `scaffolding-prototype`:
+The example below contain details about the parameters needed for executing `skaff`:
 
 ```
-$ scaffolding-prototype <generator> [outdir] [answers]
+$ skaff <generator> [outdir] [answers]
 ```
 
 - ### `generator` **(required)**
@@ -139,5 +139,5 @@ export default generatorConfig
 ```
 
 ```
-$ scaffolding-prototype ./generator output --name hello-world --description Lorem ipsum
+$ skaff ./generator output --name hello-world --description Lorem ipsum
 ```

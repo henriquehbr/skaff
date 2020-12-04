@@ -1,6 +1,6 @@
-# scaffolding-prototype
+# skaff
 
-> This project is in very early development stage, it's not advised to use it in production, at the moment, it's only a proof-of-concept, for more details about features and how things work behind the scenes, considering reading the [spec](https://github.com/henriquehbr/scaffolding-prototype/blob/main/SPEC.md)
+> This project is in very early development stage, it's not advised to use it in production, at the moment, it's only a proof-of-concept, for more details about features and how things work behind the scenes, considering reading the [spec](https://github.com/henriquehbr/skaff/blob/main/SPEC.md)
 
 ### Usage
 
