@@ -9,6 +9,7 @@
    1. [Prompts](#Prompts)
    2. [Actions](#Actions)
    3. [Templates](#Templates)
+3. [Usage](#Usage)
 
 ## Introduction
 
@@ -65,3 +66,15 @@ These are the files to be generated, but with a extra syntax, that will dynamica
   "version": "0.0.0"
 }
 ```
+
+## Usage
+
+The example below contain details about the parameters needed for executing `scaffolding-prototype`:
+
+```
+$ scaffolding-prototype <generator> [outdir] [parameters]
+```
+
+- `generator`: name of the directory (or npm module) containing the `generator.js`, needed for prompting the questions and generating the files (required)
+- `outdir`: path to where the project is going to be generated
+- `parameters`: other flags and answers to the generator prompt
