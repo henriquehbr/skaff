@@ -5,7 +5,7 @@
 ### Usage
 
 ```
-$ scaffold-prototype <generator> [outDir] [flags]
+$ skaff <generator> [outDir] [answers]
 ```
 
 ### To-do list

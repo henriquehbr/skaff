@@ -102,7 +102,7 @@ interface Actions {
   files: string
 }
 
-interface ScaffoldingPrototypeConfig {
+interface SkaffConfig {
   prompts?: Prompt[]
   actions: Actions[]
 }
