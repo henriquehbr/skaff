@@ -5,17 +5,14 @@
 ## Summary
 
 1. [Introduction](#Introduction)
-2. [Concepts](#Concepts)
    1. [Prompts](#Prompts)
    2. [Actions](#Actions)
    3. [Templates](#Templates)
-3. [Usage](#Usage)
+2. [Usage](#Usage)
 
 ## Introduction
 
-`scaffolding-prototype` is a CLI scaffolding tool aimed to setup a project architecture in a matter of seconds, regardless of the language, tools or environment, the way it works is relatively simple and mainly composed by three major pieces below
-
-## Concepts
+`scaffolding-prototype` is a CLI scaffolding tool aimed to setup a project architecture in a matter of seconds, regardless of the language, tools or environment, the way it works is relatively simple and mainly composed by three major pieces: **prompts**, **actions** and **templates**
 
 - ### Prompts
 
@@ -75,6 +72,46 @@ The example below contain details about the parameters needed for executing `sca
 $ scaffolding-prototype <generator> [outdir] [parameters]
 ```
 
-- `generator`: name of the directory (or npm module) containing the `generator.js`, needed for prompting the questions and generating the files (required)
-- `outdir`: path to where the project is going to be generated
-- `parameters`: other flags and answers to the generator prompt
+- ### `generator` **(required)**
+
+Can be the name of a npm module, or a path to the generator directory, both must contain a `generator.js`, needed for prompting the questions and generating the files, the required structure for a generator config file is the following:
+
+```typescript
+type PromptType =
+  | 'input'
+  | 'number'
+  | 'confirm'
+  | 'list'
+  | 'rawlist'
+  | 'expand'
+  | 'checkbox'
+  | 'password'
+  | 'editor'
+
+type Answers = Record<string, any>
+
+interface Prompt {
+  type?: PromptType[]
+  name: string
+  message?: string | (answers: Answers) => string
+  default: string | number | boolean | any[] | (answers: Answers) => string
+}
+
+interface Actions {
+  type: 'add'
+  files: string
+}
+
+interface ScaffoldingPrototypeConfig {
+  prompts?: Prompt[]
+  actions: Actions[]
+}
+```
+
+- ### `outdir`
+
+Path to where the project is going to be generated
+
+- ### `parameters`
+
+Other flags and answers to the generator prompt
