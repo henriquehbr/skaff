@@ -69,7 +69,7 @@ These are the files to be generated, but with a extra syntax, that will dynamica
 The example below contain details about the parameters needed for executing `scaffolding-prototype`:
 
 ```
-$ scaffolding-prototype <generator> [outdir] [parameters]
+$ scaffolding-prototype <generator> [outdir] [answers]
 ```
 
 - ### `generator` **(required)**
@@ -108,10 +108,36 @@ interface ScaffoldingPrototypeConfig {
 }
 ```
 
-- ### `outdir`
+- ### `outdir` **(required)**
 
 Path to where the project is going to be generated
 
-- ### `parameters`
+- ### `answers`
 
-Other flags and answers to the generator prompt
+Prompts can be skipped by passing flags with their names, the values of these flags will be interpreted as the answer of the respective prompt
+
+Example:
+
+```typescript
+// ./generator/generator.mjs
+const generatorConfig = {
+  prompts: [
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is the name of this package?'
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'How would you describe this package?'
+    }
+  ]
+}
+
+export default generatorConfig
+```
+
+```
+$ scaffolding-prototype ./generator output --name hello-world --description Lorem ipsum
+```
