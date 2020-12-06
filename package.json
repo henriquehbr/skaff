@@ -2,6 +2,7 @@
   "name": "skaff",
   "version": "0.1.0",
   "main": "src/index.ts",
+  "type": "module",
   "author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
   "license": "MIT",
   "scripts": {

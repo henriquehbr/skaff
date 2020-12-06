@@ -11,6 +11,7 @@ $ skaff <generator> [outDir] [answers]
 ### To-do list
 
 - [x] Tests
-  - [x] validateGenerator: check if generator exists
-  - [x] validateGenerator: check if generator fails with wrong path
-  - [ ] validateGenerator: check if generator.js file exists
+  - [x] validateGenerator: check if generator directory exists
+  - [x] validateGenerator: check if error is thrown when generator fails with wrong path
+  - [x] validateGenerator: check if generator config file exists
+  - [x] validateGenerator: check if error is thrown when generator config file doesn't exists

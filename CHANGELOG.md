@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/skaff/compare/v0.1.0...HEAD)
 
-- docs: fix example command on "Usage" section [`723150b`](https://github.com/henriquehbr/skaff/commit/723150b03d97e2a92551cb08a4e47621d462a664)
+- tests(validateGenerator): check if config file exists [`53b45e3`](https://github.com/henriquehbr/skaff/commit/53b45e3d00de2333e5d61502282022e82d3198db)
+- docs: fix example command on "Usage" section [`d0fc0b5`](https://github.com/henriquehbr/skaff/commit/d0fc0b5095bc09328ad6750316502beea5b1aa99)
 
 #### v0.1.0
 

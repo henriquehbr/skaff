@@ -4,9 +4,11 @@ import tsconfig from './tsconfig.json'
 const { pathsToModuleNameMapper } = tsJestUtils
 const { compilerOptions } = tsconfig
 
-export default {
+const config = {
   preset: 'ts-jest',
-  roots: ['<rootDir>'],
   modulePaths: ['<rootDir>'],
+  roots: ['<rootDir>'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths)
 }
+
+export default config
